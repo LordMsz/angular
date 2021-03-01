@@ -83,6 +83,10 @@ The next example targets the host element again, but only when it also has the `
 
 <code-example path="component-styles/src/app/hero-details.component.css" region="hostfunction" header="src/app/hero-details.component.css"></code-example>
 
+The `:host` selector can also be combined with other selectors.
+Add selectors after the `:host` to select child elements, for example using `:host h2` to target all `<h2>` elements inside a component's view.
+Add selectors before the `:host` to apply styles based on the context *outside* of a component's view, for example using `span :host` to style component only when inside a `<span>` element. Selectors before the `:host` are not scoped to a component's view.
+
 ### :host-context
 
 Sometimes it's useful to apply styles based on some condition *outside* of a component's view.
